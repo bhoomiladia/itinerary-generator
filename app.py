@@ -122,7 +122,7 @@ async def plan_itinerary(req: ItineraryRequest):
         "People": req.People,
     }
     output = itinerary_crew.kickoff(inputs=inputs)
-    return {"itinerary": output.raw}
+    return {"itinerary": output}
 
 @app.post("/suggest-place")
 async def suggest_place(req: ChatRequest):
