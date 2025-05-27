@@ -17,10 +17,11 @@ load_dotenv()  # Load environment variables from .env file
 
 My_API_Key = os.getenv("API_Key")
 
-# Allow your React app origin (adjust port if needed)
+
 origins = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
+    "https://aitravelbuddy.vercel.app"
 ]
 
 app.add_middleware(
@@ -107,6 +108,9 @@ itinerary_agent = Agent(
 )
 
 # -------------------- ENDPOINTS --------------------
+@app.get("/")
+def read_root():
+    return {"status": "OK"}
 
 @app.post("/plan-itinerary")
 async def plan_itinerary(req: ItineraryRequest):
