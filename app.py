@@ -179,11 +179,11 @@ async def suggest_place(req: ChatRequest):
     # Save new input/output to memory
     memory.save_context(
         {"input": req.message},
-        {"output": result.raw}
+        {"output": result}
     )
 
     return {
-        "reply": result.raw,
+        "reply": result,
         "session_id": session_id
     }
 
