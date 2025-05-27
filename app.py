@@ -7,7 +7,14 @@ from typing import Dict
 import uuid
 from datetime import datetime, timedelta
 from typing import Optional 
+from dotenv import load_dotenv
+import os
+
 app = FastAPI()
+
+load_dotenv()  # Load environment variables from .env file
+
+My_API_Key = os.getenv("API_Key")
 
 # Allow your React app origin (adjust port if needed)
 origins = [
