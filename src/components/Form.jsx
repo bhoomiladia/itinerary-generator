@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../App.css';
 import Slideshow from './slideshow';
-import Loading from './loading';
+import Loading from './Loading';
 
 const Form = () => {
   const [formData, setFormData] = useState({

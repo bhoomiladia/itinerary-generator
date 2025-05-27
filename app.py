@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from crewai import LLM, Agent, Task, Crew, Process
+from crewai import Agent, Task, Crew, Process
+from langchain_google_genai import ChatGoogleGenerativeAI
 from fastapi.middleware.cors import CORSMiddleware
 from langchain.memory import ConversationBufferMemory
 from typing import Dict
@@ -70,8 +71,11 @@ def clean_old_sessions(hours=24):
 
 # -------------------- LLM --------------------
 
-llm = LLM(model='gemini/gemini-1.5-flash', api_key='My_API_Key')
-
+llm = ChatGoogleGenerativeAI(
+    model="gemini/gemini-1.5-flash",
+    google_api_key='My_API_Key',
+    temperature=0.7
+)
 # -------------------- AGENTS --------------------
 
 def create_chat_agent():

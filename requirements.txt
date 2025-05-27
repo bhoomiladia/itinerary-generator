@@ -1,6 +1,6 @@
 fastapi==0.109.1
 uvicorn==0.27.0
 google-generativeai==0.3.2
-crewai==0.1.16  
+crewai==0.28.8
 python-dotenv==1.0.0
-
+langchain-google-genai>=0.0.11
