@@ -12,7 +12,7 @@ app = FastAPI()
 # Allow your React app origin (adjust port if needed)
 origins = [
     "http://localhost:5173",
-    "http://127.0.0.1:3000",
+    "http://127.0.0.1:5173",
 ]
 
 app.add_middleware(
@@ -63,7 +63,7 @@ def clean_old_sessions(hours=24):
 
 # -------------------- LLM --------------------
 
-llm = LLM(model='gemini/gemini-1.5-flash', api_key='AIzaSyCpd1NA0ItlUHXpMD8cLPRbA-4GYFHZMWU')
+llm = LLM(model='gemini/gemini-1.5-flash', api_key='My_API_Key')
 
 # -------------------- AGENTS --------------------
 
