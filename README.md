@@ -1,7 +1,7 @@
 ## 🌍 Travel Planner AI Chatbot
 
 A smart, responsive chatbot that helps users explore destinations, get personalized travel suggestions, and generate itineraries. Powered by **Gemini LLM**, **CrewAI**, and **FastAPI** on the backend, with a dynamic **React** frontend.
-![alt text](image.png)
+![alt text](public/image.png)
 ---
 
 ### ✨ Features
