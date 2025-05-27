@@ -74,7 +74,7 @@ def clean_old_sessions(hours=24):
 
 llm = ChatGoogleGenerativeAI(
     model="gemini/gemini-1.5-flash",
-    google_api_key='My_API_Key',
+    google_api_key=os.getenv("API_Key"),
     temperature=0.7
 )
 # -------------------- AGENTS --------------------
