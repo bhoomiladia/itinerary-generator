@@ -73,7 +73,7 @@ def clean_old_sessions(hours=24):
 # -------------------- LLM --------------------
 
 llm = ChatGoogleGenerativeAI(
-    model="gemini/gemini-1.5-flash",
+    model="gemini-1.5-flash",
     google_api_key=os.getenv("API_Key"),
     temperature=0.7
 )
